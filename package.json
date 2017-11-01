@@ -1,0 +1,38 @@
+{
+  "name": "notes",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "jest-expo": "^21.0.2",
+    "react-native-scripts": "1.5.0",
+    "react-test-renderer": "16.0.0-alpha.12"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --watch"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "color": "^2.0.0",
+    "expo": "^21.0.0",
+    "flux-standard-action": "^1.2.0",
+    "react": "16.0.0-alpha.12",
+    "react-native": "^0.48.4",
+    "react-native-action-button": "^2.8.1",
+    "react-native-swipeout": "^2.2.2",
+    "react-native-vector-icons": "^4.4.2",
+    "react-navigation": "^1.0.0-beta.15",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.2.1",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.5.3",
+    "uuid": "^3.1.0"
+  }
+}
