@@ -1,0 +1,4 @@
+#Tue Dec 05 11:56:30 PST 2017
+base.0=/Users/adrianha/GitHub/adrianhall/aws-mobile-react-native-notes-tutorial/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/adrianha/GitHub/adrianhall/aws-mobile-react-native-notes-tutorial/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

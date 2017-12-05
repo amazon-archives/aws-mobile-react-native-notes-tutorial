@@ -1,20 +1,25 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore } from 'redux';
+import { persistStore, persistCombineReducers } from 'redux-persist';
+import storage from 'redux-persist/es/storage';
 import loggerMiddleware from 'redux-logger';
 import promiseMiddleware from 'redux-promise';
-import reducers from './reducers';
 
-// For hydrating the notes
-import { getAllNotes } from './localStore';
-import { hydrateNotes } from './actions/notes';
+import notesReducer from './reducers/notes';
 
-const middleware = applyMiddleware(
-    promiseMiddleware,
-    loggerMiddleware
-);
+const persistConfig = {
+    key: 'root',
+    storage
+}
 
-const store = createStore(reducers, middleware);
-getAllNotes().then(notes => {
-    store.dispatch(hydrateNotes(notes));
-});
+const reducers = {
+    notes: notesReducer
+};
 
-export default store;
+const persistedReducers = persistCombineReducers(persistConfig, reducers);
+const store = createStore(persistedReducers);
+const persistor = persistStore(store);
+
+export {
+    persistor,
+    store
+};
