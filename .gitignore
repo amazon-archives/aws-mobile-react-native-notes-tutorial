@@ -4,3 +4,5 @@ build/
 npm-debug.*
 .DS_Store
 .vscode/.react/
+android/.gradle/
+android/app/build/
