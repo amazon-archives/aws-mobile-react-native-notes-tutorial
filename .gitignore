@@ -6,3 +6,5 @@ npm-debug.*
 .vscode/.react/
 android/.gradle/
 android/app/build/
+AppSync.js
+aws-exports.js
