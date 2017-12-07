@@ -109,6 +109,11 @@ class NoteDetails extends React.Component {
      * @memberof NoteDetails
      */
     componentWillUnmount() {
+        const note = Object.assign({}, this.state.note);  // turn state into a mutable object
+        // DynamoDB does not allow zero-length fields
+        if (note.title.length === 0) { note.title = ' '; }
+        if (note.content.length === 0) { note.content = ' '; }
+        // now save the note
         this.props.saveNote(this.state.note);
     }
 
