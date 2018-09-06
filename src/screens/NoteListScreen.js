@@ -201,7 +201,7 @@ class NoteList extends React.Component {
      * @memberof NoteList
      */
     onDeleteNote(item) {
-        this.props.deleteNote(item.noteId);
+        this.props.deleteNote(item);
     }
 
     /**
@@ -287,7 +287,7 @@ const mapStateToProps = (state) => {
  */
 const mapDispatchToProps = (dispatch) => {
     return {
-        deleteNote: (noteId) => dispatch(actions.notes.deleteNote({ noteId }))
+        deleteNote: ({ noteId }) => dispatch(actions.notes.deleteNote({ noteId }))
     };
 };
 const NoteListScreen = connect(mapStateToProps, mapDispatchToProps)(NoteList);
